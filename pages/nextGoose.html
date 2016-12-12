@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>First Generation Immigrants: The Story of Us</title>
+		<link rel = "stylesheet" href="./stylesheet.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	</head>
+
+	<body>
+
+	    <audio id="audioElement" src="./Isolation.mp3"></audio>
+	    <div>
+	      <button onclick="playMusic()">Play the Audio</button>
+	      <button onclick="pauseMusic()">Pause the Audio</button>
+	    </div>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="app.js"></script>
+  </body>
+
+  <script>
+  	function playMusic(){
+
+  		var aud = document.getElementById('audioElement')
+  		aud.play();
+  	}
+
+  	function pauseMusic(){
+
+  		var aud = document.getElementById('audioElement')
+  		aud.pause();
+  	}
+  </script>
+</html>

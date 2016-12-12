@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>First Generation Immigrants: The Story of Us</title>
+		<script type="text/javascript" src="./jq/jquery-3.1.1.min.js"></script>
+		<link rel = "stylesheet" href="./css/stylesheet.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<audio id = "audio-file">
+			<source src="./mp3/Isolation.mp3" type="audio/mpeg">
+		</audio>
+	</head>
+	<body onload = "lowerVolume()">
+		<div id = "nav-icons">
+			<ul style = "list-style: none; display: inline; padding: 0">
+				<li style = "display: inline"><i class="material-icons md-36"><a href = "#">home</a></i></li>
+				<li style = "display: inline" class = "popup" onclick = "popUp()"><i class="material-icons md-36"><a href = "#">info</a></i> 
+					<span class="popuptext" id="myPopup">A수현M<br>S.K.<br>20<br>UMCP<br><br>Immigration is an online art installation that conveys the struggles and sacrifices that immigrant families face through their journey to an alien land. While adapting to the new cultures and customs of our new unaquired homes, we experience prejudice, isolation, separation, and confusion. <br><br>
+					Click on one of the links "Isolation", "Goose Father", or "Water Hose" to see the interactive art created with ThreeJS, and Blender.</span></li>
+				<li style = "display: inline"><i id = "volume-button" class="material-icons md-36" onclick="muteAudio()">volume_up</i></li>
+			</ul>
+		</div>
+
+		<h1 id = "deep-shadow">Immigration</h1>
+		<div class = "content">
+			<div class = "visible">
+				<ul>
+					<li>My</li>
+					<li>나의</li>
+					<li>Andy's</li>
+					<li>수현이의</li>
+				</ul>
+				<p>Identity</p>
+			</div>
+		</div>
+
+		<ul id = "links">
+			<li><a class = "link" href = "./pages/birds.html">Isolation</a></li>
+			<li><a class = "link" href = "./pages/goose.html">Goose Father</a></li>
+			<li><a class = "link" href = "#">Water Hose</a></li>
+		</ul>
+
+	</body>
+
+	<script>
+
+		$(document).ready(function() {
+
+			$('body').css('display', 'none');
+
+			$('body').fadeIn(6000);
+
+
+
+		$('.link').click(function(event) {
+
+			event.preventDefault();
+
+			newLocation = this.href;
+
+			$('body').fadeOut(3000, newpage);
+
+		});
+
+
+
+		function newpage() {
+
+			window.location = newLocation;
+
+		}
+
+		});
+
+	</script>
+
+	<script>
+
+		function lowerVolume(){
+
+			var aud = document.getElementById("audio-file");
+			aud.volume = 0.2;
+			aud.play();
+			aud.loop = true;
+		}
+
+		function muteAudio(){
+
+			var aud = document.getElementById("audio-file");
+			var icon = document.getElementById("volume-button");
+
+			if(aud.muted){
+				aud.muted = false;
+				icon.innerHTML = "volume_up";
+			}
+
+			else{
+				aud.muted = true;
+				icon.innerHTML = "volume_off";
+			}	
+		}
+
+		function popUp() {
+		    var popup = document.getElementById('myPopup');
+		    popup.classList.toggle('show');
+		}
+	</script>
+</html>

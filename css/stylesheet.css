@@ -1,0 +1,227 @@
+body {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 92px;
+  padding: 80px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+
+}
+
+#nav-icons {
+  float: left; 
+  color: white;
+}
+
+#nav-icons a{
+  text-decoration: none;
+  color: white;
+}
+
+#nav-icons i {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#nav-icons i:hover{
+  cursor: pointer;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+#deep-shadow {
+    padding-top: 15%;
+    color: #ffffff;
+    background-color: #000;
+    letter-spacing: .1em;
+    text-shadow: 0 0 0.05em #eee
+}
+#description {
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+  font-size: 36px;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+}
+
+.content {
+  position: fixed;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  line-height: 40px;
+  font-family: 'Lato', sans-serif;
+  color: #ecf0f1;
+  height: 160px;
+  overflow:hidden;
+}
+
+#links {
+  margin-top: 15%;
+  text-align: center;
+  padding: 0;
+}
+
+#links > li{
+  display: inline;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-right: solid .1em;
+  border-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  color: #ecf0f1;
+}
+
+#links > li:last-child{
+  border-right: none;
+}
+
+#links > li > a{
+  text-decoration: none;
+  color: #999;
+  -webkit-transition: 1s;
+}
+
+
+#links > li > a:hover{
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: 1s;
+}
+
+.visible {
+  font-weight:100;
+  overflow:hidden;
+  height:40px;
+  padding:0 0px;
+}
+
+.visible p {
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+  padding-left: 10px;
+  display: inline;
+}
+
+.visible ul {
+  display: inline;
+  float: left;
+  margin-top:0;
+  text-align:right;
+  list-style:none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+.visible ul li {
+  line-height:40px;
+  margin:0;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    font-family: "Lato", sans-serif;
+    margin-left: -30px;
+    margin-top: 150%;
+    padding-left: 50px;
+    visibility: hidden;
+    width: 500px;
+    background-color: #000;
+    color: #eee;
+    font-weight: 100;
+    line-height: 3em;
+    border-radius: 3px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@-webkit-keyframes change {
+  0%, 12%, 100% {transform:translateY(0);}
+  17%,29% {transform:translateY(-25%);}
+  34%,46% {transform:translateY(-50%);}
+  51%,63% {transform:translateY(-75%);}
+  68%,80% {transform:translateY(-50%);}
+  85%,97% {transform:translateY(-25%);}
+}
+
+@keyframes change {
+  0%, 12%, 100% {transform:translateY(0);}
+  17%,29% {transform:translateY(-25%);}
+  34%,46% {transform:translateY(-50%);}
+  51%,63% {transform:translateY(-75%);}
+  68%,80% {transform:translateY(-50%);}
+  85%,97% {transform:translateY(-25%);}
+}

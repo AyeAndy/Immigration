@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>First Generation Immigrants: The Story of Us</title>
+		<link rel = "stylesheet" href="../css/stylesheetGoose.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<audio id = "audio-file">
+			<source src="./mp3/Isolation.mp3" type="audio/mpeg">
+		</audio>
+	</head>
+	<body>
+
+		<div style = "margin-top: 20%;"><i style = "font-family: Times New Roman; font-size: 50px;">Goose Father</i><br>(noun)</div>
+		<div id = "definition" style = "margin-top: 2%;">Man who works in his native country while his wife and children stay in an English-speaking country for the sake of the children's education.</div>
+
+		<i id = "next_arrow" class="material-icons md-36" style = "padding-left: 49%; margin-top: 5%; text-align: center;"><a href = "./nextGoose.html">arrow_forward</a></i>
+
+
+	</body>
+
+	<script>
+
+		function lowerVolume(){
+
+			var aud = document.getElementById("audio-file");
+			aud.volume = 0;
+			aud.play();
+			aud.loop = true;
+		}
+
+		function muteAudio(){
+
+			var aud = document.getElementById("audio-file");
+			var icon = document.getElementById("volume-button");
+
+			if(aud.muted){
+				aud.muted = false;
+				icon.innerHTML = "volume_up";
+			}
+
+			else{
+				aud.muted = true;
+				icon.innerHTML = "volume_off";
+			}	
+		}
+
+	</script>
+
+</html>
